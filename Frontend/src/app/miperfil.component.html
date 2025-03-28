@@ -1,0 +1,42 @@
+<div class="position-absolute top-50 start-50 translate-middle">
+    <div class="text-white badge bg-primary text-wrap" style="width: 9rem;">
+        <h6>Datos del administrador:</h6>
+      </div>
+<div class="p-3 mb-2 text-white bg-success" style="width: 30rem;" >
+<div class="d-flex justify-content-around">
+    <table class="table table-striped bg-success">
+        <thead>
+          <tr>
+            <th scope="col">Usuario</th>
+            <th scope="col">Universidad</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Carnet</th>
+            <th scope="col">Curso</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="table-dark"><p>{{administrador.usuario}}</p></th>
+            <td class="table-dark"><p>{{administrador.universidad}}</p></td>
+            <td class="table-dark"><p>{{administrador.nombre}}</p></td>
+            <td class="table-dark"><p>{{administrador.carnet}}</p></td>
+            <td class="table-dark">{{administrador.curso}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      
+      <form (ngSubmit)="cambiarPassword()" id="passwordForm" class="form-control">
+            <label class="form-label">Password anterior: *
+              <br> {{administrador.password}}
+            </label>
+            <label class="form-label">Password nueva: *</label> 
+            <input type="text" class="form-control" [(ngModel)]="administradorp.password"
+            [ngModelOptions]="{standalone:true}" placeholder="Password nueva" required>
+            <br>
+          <input type="submit" class="btn btn-outline-success float-end" value="Cambiar">          
+    </form>
+</div>
+</div>
+</div>

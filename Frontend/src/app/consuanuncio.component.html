@@ -1,0 +1,15 @@
+<div class="position-absolute top-50 start-50 translate-middle">
+    <div class="text-white badge bg-primary text-wrap" style="width: 9rem;">
+        <h6>Anuncios existentes:</h6>
+      </div>
+<div class="p-3 mb-2 text-white bg-secondary" style="width: 20rem;">
+    <ul *ngFor="let anuncio of anuncio">
+        <li>{{anuncio.idanuncio}}</li>
+        <li>{{anuncio.texto}}</li>
+        <img width="150px" [src]="anuncio.imagen" alt="">
+        <li>{{anuncio.fechaInicio | date}}</li>
+        <li>{{anuncio.fechaFin | date}}</li>
+        <li>{{anuncio.idtipoAnuncio | tipo : tipoanuncio}}</li>
+    </ul>
+</div>
+</div>

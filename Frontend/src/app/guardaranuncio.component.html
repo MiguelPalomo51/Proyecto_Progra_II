@@ -1,0 +1,39 @@
+<br>
+<br>
+<form (ngSubmit)="guardarAnuncio()" id="anuncioForm">
+    <input type="text" 
+    [(ngModel)]="anuncio.texto" 
+    [ngModelOptions]="{standalone:true}"
+    placeholder="Texto"
+    required>
+    <br>
+    <br>
+    <input (change)="handleUpload($event)" type="file" class="form-control"
+        [(ngModel)]="anuncio.imagen" 
+        [ngModelOptions]="{standalone:true}" required>
+    <br>
+    <br>
+    <input type="date" 
+    [(ngModel)]="anuncio.fechaInicio" 
+    [ngModelOptions]="{standalone:true}"
+    placeholder="Fecha_Inicio"
+    required>
+    <br>
+    <br>
+    <input type="date" 
+    [(ngModel)]="anuncio.fechaFin"  
+    [ngModelOptions]="{standalone:true}"
+    placeholder="Fecha_Fin"
+    required>
+    <br>
+    <br>
+    <label class="form-label">Tipo: *</label>
+          <select class="form-select" aria-label="Seleccione" [(ngModel)]="anuncio.idtipoAnuncio"
+          [ngModelOptions]="{standalone:true}" required>
+            <option selected></option>
+            <option *ngFor="let tipoanuncio of tipoanuncio" value="{{tipoanuncio.idtipoAnuncio}}">{{tipoanuncio.descripcion}}</option>
+          </select>
+    <br>
+    <br>
+    <input type="submit">
+</form>

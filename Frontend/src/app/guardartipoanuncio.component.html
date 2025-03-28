@@ -1,0 +1,23 @@
+<div class="container">
+    <h1> Crear tipo de anuncio</h1>
+    <hr>
+<form (ngSubmit)="guardarTipoanuncio()" id="tipoForm">
+    <div class="mb-3">
+        <label class="form-label">descripcion: *</label>
+    <input type="text" class="form-control"
+    [(ngModel)]="tipoanuncio.descripcion" 
+    [ngModelOptions]="{standalone:true}" required>
+    </div>
+    <br>
+    <br>
+    <div class="mb-3">
+        <label class="form-label">Imagen: *</label>
+        <input (change)="handleUpload($event)" type="file" class="form-control"
+        [(ngModel)]="tipoanuncio.imagen" 
+        [ngModelOptions]="{standalone:true}" required>
+        </div>
+    <br>
+    <br>
+    <input type="submit" class="btn btn-outline-success float-end" value="Guardar">
+    <button class="btn btn-outline-primary float-end" (click)="limpiarFormulario()">Limpiar formulario</button>
+</form>

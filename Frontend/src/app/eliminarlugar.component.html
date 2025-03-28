@@ -1,0 +1,14 @@
+<div class="container">
+    <h1> Eliminar Lugar</h1>
+    <hr>
+<form (ngSubmit)="eliminarLugar(lugar)" id="elugarForm">
+    <div class="mb-3">
+    <label class="form-label">Id Lugar: *</label>
+    <input type="number" class="form-control" 
+    [(ngModel)]="lugar.idlugar" 
+    [ngModelOptions]="{standalone:true}" required>
+    </div>
+<br>
+<br>
+    <input type="submit" class="btn btn-outline-danger float-end" value="Eliminar">
+</form>

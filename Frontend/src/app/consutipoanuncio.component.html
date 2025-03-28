@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-center">
+    <div class="p-3 mb-2 text-white bg-success" style="width: 20rem;">
+        <ul *ngFor="let tipoanuncio of tipoanuncio">
+            <li>{{tipoanuncio.idtipoAnuncio}}</li>
+            <li>{{tipoanuncio.descripcion}}</li>
+            <img width="150px" [src]="tipoanuncio.imagen" alt="">
+        </ul>
+    </div>
+    </div>
